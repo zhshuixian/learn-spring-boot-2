@@ -19,12 +19,22 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    compile.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    implementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    testImplementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    // 引入 Log4j2
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-log4j2
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2'
+
 }
 
 test {
