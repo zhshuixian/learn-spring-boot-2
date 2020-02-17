@@ -1,6 +1,6 @@
 package org.xian.boot;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,11 +9,17 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("hello")
+@Slf4j
 public class HelloSpringBoot {
 
     @RequestMapping("string")
     @ResponseStatus(HttpStatus.OK)
     public String helloString(){
+        log.trace("trace");
+        log.debug("debug");
+        log.warn("warn");
+        log.info("info");
+        log.error("error");
         return "Hello Spring Boot";
     }
 

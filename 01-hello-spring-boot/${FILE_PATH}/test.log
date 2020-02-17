@@ -1,0 +1,60 @@
+2020-02-17 23:41:26.920 INFO  [main] o.x.b.BootApplication.logStarting(55): Starting BootApplication on XIAN with PID 14508 (D:\Project\learn-spring-boot-2\01-hello-spring-boot\build\classes\java\main started by xian in D:\Project\learn-spring-boot-2\01-hello-spring-boot)
+2020-02-17 23:41:26.920 INFO  [main] o.x.b.BootApplication.logStartupProfileInfo(651): No active profile set, falling back to default profiles: default
+2020-02-17 23:41:27.440 INFO  [main] o.a.c.h.Http11NioProtocol.log(173): Initializing ProtocolHandler ["https-jsse-nio-8000"]
+2020-02-17 23:41:27.445 INFO  [main] o.a.c.c.StandardService.log(173): Starting service [Tomcat]
+2020-02-17 23:41:27.445 INFO  [main] o.a.c.c.StandardEngine.log(173): Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-17 23:41:27.500 INFO  [main] o.a.c.c.C.[.[.[/].log(173): Initializing Spring embedded WebApplicationContext
+2020-02-17 23:41:27.672 INFO  [main] o.a.c.h.Http11NioProtocol.log(173): Starting ProtocolHandler ["https-jsse-nio-8000"]
+2020-02-17 23:41:27.970 INFO  [main] o.x.b.BootApplication.logStarted(61): Started BootApplication in 1.324 seconds (JVM running for 2.151)
+2020-02-17 23:41:27.970 WARN  [main] o.x.b.BootApplication.main(20): warn
+2020-02-17 23:41:27.970 INFO  [main] o.x.b.BootApplication.main(21): info
+2020-02-17 23:41:27.970 ERROR [main] o.x.b.BootApplication.main(22): error
+2020-02-17 23:41:27.970 WARN  [main] o.x.b.BootApplication.main(25): warn
+2020-02-17 23:41:27.970 INFO  [main] o.x.b.BootApplication.main(26): info
+2020-02-17 23:41:27.970 ERROR [main] o.x.b.BootApplication.main(27): error
+2020-02-17 23:41:27.970 WARN  [main] o.x.b.BootApplication.main(30): warn
+2020-02-17 23:41:27.970 INFO  [main] o.x.b.BootApplication.main(31): info
+2020-02-17 23:41:27.970 ERROR [main] o.x.b.BootApplication.main(32): error
+2020-02-17 23:41:27.970 WARN  [main] o.x.b.BootApplication.main(35): warn
+2020-02-17 23:41:27.970 INFO  [main] o.x.b.BootApplication.main(36): info
+2020-02-17 23:41:27.970 ERROR [main] o.x.b.BootApplication.main(37): error
+2020-02-17 23:41:27.970 WARN  [main] o.x.b.BootApplication.main(40): warn
+2020-02-17 23:41:27.984 INFO  [main] o.x.b.BootApplication.main(41): info
+2020-02-17 23:41:27.984 ERROR [main] o.x.b.BootApplication.main(42): error
+2020-02-17 23:41:27.984 WARN  [main] o.x.b.BootApplication.main(45): warn
+2020-02-17 23:41:27.984 INFO  [main] o.x.b.BootApplication.main(46): info
+2020-02-17 23:41:27.984 ERROR [main] o.x.b.BootApplication.main(47): error
+2020-02-17 23:41:27.984 WARN  [main] o.x.b.BootApplication.main(50): warn
+2020-02-17 23:41:27.984 INFO  [main] o.x.b.BootApplication.main(51): info
+2020-02-17 23:41:27.984 ERROR [main] o.x.b.BootApplication.main(52): error
+2020-02-17 23:41:27.984 WARN  [main] o.x.b.BootApplication.main(55): warn
+2020-02-17 23:41:27.984 INFO  [main] o.x.b.BootApplication.main(56): info
+2020-02-17 23:41:27.984 ERROR [main] o.x.b.BootApplication.main(57): error
+2020-02-17 23:41:27.984 WARN  [main] o.x.b.BootApplication.main(60): warn
+2020-02-17 23:41:27.984 INFO  [main] o.x.b.BootApplication.main(61): info
+2020-02-17 23:41:27.984 ERROR [main] o.x.b.BootApplication.main(62): error
+2020-02-17 23:41:27.984 WARN  [main] o.x.b.BootApplication.main(65): warn
+2020-02-17 23:41:27.984 INFO  [main] o.x.b.BootApplication.main(66): info
+2020-02-17 23:41:27.984 ERROR [main] o.x.b.BootApplication.main(67): error
+2020-02-17 23:41:27.984 WARN  [main] o.x.b.BootApplication.main(70): warn
+2020-02-17 23:41:27.984 INFO  [main] o.x.b.BootApplication.main(71): info
+2020-02-17 23:41:27.984 ERROR [main] o.x.b.BootApplication.main(72): error
+2020-02-17 23:41:27.984 WARN  [main] o.x.b.BootApplication.main(75): warn
+2020-02-17 23:41:27.984 INFO  [main] o.x.b.BootApplication.main(76): info
+2020-02-17 23:41:27.984 ERROR [main] o.x.b.BootApplication.main(77): error
+2020-02-17 23:41:27.984 WARN  [main] o.x.b.BootApplication.main(80): warn
+2020-02-17 23:41:27.984 INFO  [main] o.x.b.BootApplication.main(81): info
+2020-02-17 23:41:27.984 ERROR [main] o.x.b.BootApplication.main(82): error
+2020-02-17 23:41:27.984 WARN  [main] o.x.b.BootApplication.main(85): warn
+2020-02-17 23:41:27.984 INFO  [main] o.x.b.BootApplication.main(86): info
+2020-02-17 23:41:27.984 ERROR [main] o.x.b.BootApplication.main(87): error
+2020-02-17 23:41:27.984 WARN  [main] o.x.b.BootApplication.main(90): warn
+2020-02-17 23:41:27.984 INFO  [main] o.x.b.BootApplication.main(91): info
+2020-02-17 23:41:27.984 ERROR [main] o.x.b.BootApplication.main(92): error
+2020-02-17 23:41:27.984 WARN  [main] o.x.b.BootApplication.main(95): warn
+2020-02-17 23:41:27.984 INFO  [main] o.x.b.BootApplication.main(96): info
+2020-02-17 23:41:27.984 ERROR [main] o.x.b.BootApplication.main(97): error
+2020-02-17 23:42:15.734 INFO  [https-jsse-nio-8000-exec-2] o.a.c.c.C.[.[.[/].log(173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-17 23:42:15.748 WARN  [https-jsse-nio-8000-exec-2] o.x.b.HelloSpringBoot.helloString(20): warn
+2020-02-17 23:42:15.748 INFO  [https-jsse-nio-8000-exec-2] o.x.b.HelloSpringBoot.helloString(21): info
+2020-02-17 23:42:15.749 ERROR [https-jsse-nio-8000-exec-2] o.x.b.HelloSpringBoot.helloString(22): error

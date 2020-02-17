@@ -19,6 +19,7 @@ repositories {
     mavenCentral()
 }
 
+// 排除 spring-boot-starter-logging
 configurations {
     compile.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
     implementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
