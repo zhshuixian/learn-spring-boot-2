@@ -42,4 +42,6 @@ public interface SysUserRepository extends JpaRepository<SysUser, Long> {
      */
     Page<SysUser> findByNicknameLike(@Param("nickname") String nickname, Pageable pageable);
 
+
+
 }

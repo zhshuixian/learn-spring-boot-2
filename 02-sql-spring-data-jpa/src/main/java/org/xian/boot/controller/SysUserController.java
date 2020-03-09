@@ -8,8 +8,6 @@ import org.xian.boot.entity.SysUser;
 import org.xian.boot.service.SysUserService;
 
 import javax.annotation.Resource;
-import javax.validation.Valid;
-import javax.validation.constraints.Min;
 import java.util.List;
 
 /**
