@@ -16,6 +16,8 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    // https://mvnrepository.com/artifact/org.apache.rocketmq/rocketmq-spring-boot-starter
+    compile group: 'org.apache.rocketmq', name: 'rocketmq-spring-boot-starter', version: '2.1.0'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }

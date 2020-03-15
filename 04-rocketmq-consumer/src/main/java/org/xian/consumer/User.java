@@ -1,4 +1,4 @@
-package org.xian.producer;
+package org.xian.consumer;
 
 /**
  * @author xian
