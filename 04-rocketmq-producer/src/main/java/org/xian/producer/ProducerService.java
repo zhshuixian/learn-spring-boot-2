@@ -30,15 +30,16 @@ public class ProducerService {
     private String tag;
 
     public SendResult sendString(String message) {
-        // Send string
+        // 发送 String 类型的消息
         SendResult sendResult = mqTemplate.syncSend(springTopic + ":" + tag, message);
-        logger.info("syncSend1 to topic {} sendResult={} \n", springTopic, sendResult);
+        logger.info("syncSend String to topic {} sendResult={} \n", springTopic, sendResult);
         return sendResult;
     }
 
     public SendResult sendUser(User user) {
+        // 发送 User
         SendResult sendResult = mqTemplate.syncSend(userTopic, user);
-        logger.info("syncSend1 to topic {} sendResult= {} \n", userTopic, sendResult);
+        logger.info("syncSend User to topic {} sendResult= {} \n", userTopic, sendResult);
         return sendResult;
     }
 }

@@ -18,7 +18,8 @@ public class StringConsumer implements RocketMQListener<String> {
 
     @Override
     public void onMessage(String message) {
+        // 重写消息处理方法
         logger.info("------- StringConsumer received:{} \n", message);
-        // TODO 对消息进行处理
+        // TODO 对消息进行处理，比如写入数据
     }
 }

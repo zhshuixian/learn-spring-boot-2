@@ -25,5 +25,4 @@ public class ProducerController {
     public SendResult sendUser(@RequestBody User user){
         return producerService.sendUser(user);
     }
-
 }
