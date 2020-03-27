@@ -1,4 +1,4 @@
-package org.xian.security.config.security;
+package org.xian.security.security;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.xian.security.entity.SysUser;
 import org.xian.security.mapper.SysUserMapper;
-import org.xian.security.service.SysUserService;
+
 
 import javax.annotation.Resource;
 import java.util.ArrayList;

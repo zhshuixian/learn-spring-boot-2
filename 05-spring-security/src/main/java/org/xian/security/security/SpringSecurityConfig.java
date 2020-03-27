@@ -1,4 +1,4 @@
-package org.xian.security.config.security;
+package org.xian.security.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +13,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.annotation.Resource;
 
+/**
+ * @author xian
+ */
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -21,8 +24,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     private MyUserDetailsServiceImpl userDetailsService;
 
     @Override
-    public void configure(WebSecurity web) throws Exception {
-        // 忽略前端静态资源
+    public void configure(WebSecurity web) {
+        // 忽略前端静态资源 css js 等
         web.ignoring().antMatchers("/css/**");
         web.ignoring().antMatchers("/js/**");
     }
@@ -45,15 +48,20 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         // 允许无授权访问 "/login"、"/register" "/register-save"
         // 其他地址的访问均需验证权限
         http.authorizeRequests()
-                .antMatchers("/login", "/register","/register-save","/error").permitAll()
+                .antMatchers("/login", "/register", "/register-save", "/error").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
+                // 用户名和用户密码参数名称
                 .passwordParameter("password")
                 .usernameParameter("username")
+                // 指定登录页面
                 .loginPage("/login")
-                .failureUrl("/login-error").permitAll()
+                // 登录错误跳转到 /login-error
+                .failureUrl("/login-error")
+                .permitAll()
                 .and()
+                // 设置退出登录的 URL 和退出成功后跳转页面
                 .logout()
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/login");
