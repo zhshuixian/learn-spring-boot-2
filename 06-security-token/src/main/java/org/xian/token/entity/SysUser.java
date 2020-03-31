@@ -18,7 +18,6 @@ public class SysUser implements Serializable {
 
 
     public SysUser() {
-
     }
 
     public SysUser(Long userId, String username, String password, String userRole) {

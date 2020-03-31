@@ -5,14 +5,21 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.xian.token.MyResponse;
 import org.xian.token.entity.SysUser;
 import org.xian.token.mapper.SysUserMapper;
 import org.xian.token.secutiry.TokenUtils;
+import org.xian.token.secutiry.UserDetailsServiceImpl;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 实现用户服务的接口
@@ -24,10 +31,6 @@ import javax.annotation.Resource;
 public class SysUserService {
     @Resource
     private AuthenticationManager authenticationManager;
-
-    @Resource
-    @Qualifier("authUserDetailsServiceImpl")
-    private UserDetailsService userDetailsService;
 
     @Resource
     private TokenUtils tokenUtils;
@@ -43,19 +46,20 @@ public class SysUserService {
      */
     public MyResponse login(final SysUser sysUser) {
         String status;
-        // 验证用户名和密码是否对的
         try {
+            // 验证用户名和密码是否对的
+            System.out.println(sysUser.getUsername());
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(sysUser.getUsername(),
                             sysUser.getPassword()));
             status = "SUCCESS";
         } catch (BadCredentialsException e) {
-            throw new BadCredentialsException("用户名或密码不正确");
+            return new MyResponse("ERROR", "用户名或者密码不正确");
         }
         // 生成Token与查询用户权限
-        final var userDetails = userDetailsService.loadUserByUsername(sysUser.getUsername());
+        SysUser sysUserData = sysUserMapper.selectByUsername(sysUser.getUsername());
         return new MyResponse(status,
-                tokenUtils.createToken(userDetails));
+                tokenUtils.createToken(sysUserData));
     }
 
     /**
@@ -66,6 +70,10 @@ public class SysUserService {
      */
     public MyResponse save(SysUser sysUser) throws DataAccessException {
         try {
+            // 密码加密存储
+            BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+            String password = bCryptPasswordEncoder.encode(sysUser.getPassword());
+            sysUser.setPassword(password);
             sysUserMapper.insert(sysUser);
         } catch (DataAccessException e) {
             return new MyResponse("ERROR", "已经存在该用户名或者用户昵称，或者用户权限出错");
