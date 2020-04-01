@@ -26,7 +26,6 @@ import java.util.List;
  *
  * @author xian
  */
-
 @Service
 public class SysUserService {
     @Resource
@@ -45,20 +44,18 @@ public class SysUserService {
      * @return 用户登录成功返回的Token
      */
     public MyResponse login(final SysUser sysUser) {
-        String status;
         try {
             // 验证用户名和密码是否对的
             System.out.println(sysUser.getUsername());
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(sysUser.getUsername(),
                             sysUser.getPassword()));
-            status = "SUCCESS";
         } catch (BadCredentialsException e) {
             return new MyResponse("ERROR", "用户名或者密码不正确");
         }
         // 生成Token与查询用户权限
         SysUser sysUserData = sysUserMapper.selectByUsername(sysUser.getUsername());
-        return new MyResponse(status,
+        return new MyResponse("SUCCESS",
                 tokenUtils.createToken(sysUserData));
     }
 
@@ -80,6 +77,4 @@ public class SysUserService {
         }
         return new MyResponse("SUCCESS", "用户新增成功");
     }
-
-
 }

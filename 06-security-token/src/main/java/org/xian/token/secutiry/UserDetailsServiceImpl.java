@@ -25,7 +25,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         SysUser sysUser = sysUserMapper.selectByUsername(username);
-        if (null == sysUser) {
+        if (sysUser == null ) {
             throw new UsernameNotFoundException(username);
         }
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();

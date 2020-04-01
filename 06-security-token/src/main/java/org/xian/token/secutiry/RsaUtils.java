@@ -15,17 +15,14 @@ import java.util.Base64;
 public class RsaUtils {
 
     /**
-     * PrivateKey * 生成秘钥 > openssl genrsa -out rsa_private_key.pem 2048 转换成PKCS8格式 >
-     * openssl pkcs8 -topk8 -inform * PEM -in rsa_private_key.pem -outform PEM
-     * -nocrypt 在终端输出结果，去掉“-----BEGIN PRIVATE KEY-----” * “-----END PRIVATE
-     * KEY-----”
+     * PrivateKey * 生成秘钥 > openssl genrsa -out rsa_private_key.pem 2048
+     * 转换成PKCS8格式 > openssl pkcs8 -topk8 -inform * PEM -in rsa_private_key.pem -outform PEM -nocrypt
+     * 在终端输出结果，去掉“-----BEGIN PRIVATE KEY-----” * “-----END PRIVATE KEY-----”
      *
      * @return PrivateKey
      */
     public static PrivateKey getPrivateKey() {
-        PrivateKey privateKey = null;
         try {
-
             String privateKeyStr = "MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCtMiN7Vitzs8FM" +
                     "SHoaxIiIvj3wrlce5ckNO+ZiXWox8QiDmpD08m51CSGrJsrDSzWebVH7ICcyjvSz" +
                     "RuRCrHzmyE4dX3isaXdz0uqDhABHTRUxcHGFopEv4ChbFp5y0eCQB5NMcw0x5erA" +
@@ -54,16 +51,15 @@ public class RsaUtils {
                     "mkhVZXbOx8/ikNP34wBdih2I9A==";
             PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(Base64.getDecoder().decode(privateKeyStr));
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
-            privateKey = keyFactory.generatePrivate(keySpec);
+            return keyFactory.generatePrivate(keySpec);
         } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
             e.printStackTrace();
+            return null;
         }
-        return privateKey;
     }
 
     /**
-     * PublicKey 根据 秘钥 生成public key > openssl rsa -in rsa_private_key.pem -out
-     * rsa_public_key.pem -pubout
+     * PublicKey 根据 秘钥 生成public key > openssl rsa -in rsa_private_key.pem -out rsa_public_key.pem -pubout
      *
      * @return PublicKey
      */
