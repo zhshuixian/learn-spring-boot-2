@@ -1,25 +1,19 @@
 package org.xian.token.service;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.xian.token.MyResponse;
 import org.xian.token.entity.SysUser;
 import org.xian.token.mapper.SysUserMapper;
 import org.xian.token.secutiry.TokenUtils;
-import org.xian.token.secutiry.UserDetailsServiceImpl;
+
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * 实现用户服务的接口

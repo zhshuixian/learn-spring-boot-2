@@ -1,0 +1,30 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.13.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+group = 'org.xian'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.2'
+    runtimeOnly 'mysql:mysql-connector-java'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // https://mvnrepository.com/artifact/org.apache.shiro/shiro-spring-boot-web-starter
+    compile group: 'org.apache.shiro', name: 'shiro-spring-boot-web-starter', version: '1.5.2'
+    // https://github.com/jwtk/jjwt
+    compile 'io.jsonwebtoken:jjwt-api:0.11.1'
+    runtime 'io.jsonwebtoken:jjwt-impl:0.11.1',
+            // Uncomment the next line if you want to use RSASSA-PSS (PS256, PS384, PS512) algorithms:
+            //'org.bouncycastle:bcprov-jdk15on:1.60',
+            // or 'io.jsonwebtoken:jjwt-gson:0.11.1' for gson
+            'io.jsonwebtoken:jjwt-jackson:0.11.1'
+}
