@@ -8,7 +8,7 @@
 
 ### 主要内容（更新中）
 
-![](image/image-20200206005313773.png)
+![](./image/image-20200206005313773.png)
 
 ### 作者介绍
 
@@ -18,4 +18,4 @@ GitHub 主页 : [https://github.com/zhshuixian](https://github.com/zhshuixian)
 
 扫描下方二维码添加小先微信。
 
-![](image/WeChat.png)
+![](./image/WeChat.jpg)
