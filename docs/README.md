@@ -8,7 +8,9 @@
 - 码云 在线阅读：https://ylooq.gitee.io/learn-spring-boot-2/#/
 - 码云 源码仓库：https://gitee.com/ylooq/learn-spring-boot-2
 
-![](../image/image-20200206005313773.png)
+### 主要内容（更新中）
+
+![](image/image-20200206005313773.png)
 
 ### 作者介绍
 
@@ -18,4 +20,4 @@ GitHub 主页 : [https://github.com/zhshuixian](https://github.com/zhshuixian)
 
 扫描下方二维码添加小先微信。
 
-![](../image/WeChat.jpg)
+![](image/WeChat.jpg)
