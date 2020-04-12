@@ -4,6 +4,7 @@
 
 [博客主页](https://me.csdn.net/u010974701)
 [GitHub](https://github.com/zhshuixian/learn-spring-boot-2)
+[Gitee](https://gitee.com/ylooq/learn-spring-boot-2)
 [开始阅读](#Introduction)
 
 
