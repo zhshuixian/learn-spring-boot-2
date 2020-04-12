@@ -39,7 +39,7 @@
 
 上一小节讲到，Spring Data JPA 只需要按照规则编写接口的方法名，就可以直接进行相应的 SQL 操作，代码一目了然，开发者几乎不需要跳到 Repository 接口去了解此方法的用途。
 
-相对于 Spring Data JPA 差不多可以不用写 SQL 的框架而言，MyBatis 在于开发者可以灵活的编写 SQL，但带来的麻烦就是项目中一堆 Mapper.xml 等一堆配置文件。即使通过 MyBatis 的代码生成器，自动生成实体类、相关配置文件减少了开发者的工作，但有时更改一个表字段，带来的结果可能是需要同时修改好几个 XML 和 Java 代码，使得开发者在 xml 的配置文件和 Java 代码之间经常切换。	
+相对于 Spring Data JPA 差不多可以不用写 SQL 的框架而言，MyBatis 在于开发者可以灵活的编写 SQL，但带来的麻烦就是项目中一堆 Mapper.xml 等一堆配置文件。即使通过 MyBatis 的代码生成器，自动生成实体类、相关配置文件减少了开发者的工作，但有时更改一个表字段，带来的结果可能是需要同时修改好几个 XML 和 Java 代码，使得开发者在 xml 的配置文件和 Java 代码之间经常切换。    
 
 后来，MyBatis 做了大量的升级优化，可以通过使用注解来减少相关的配置文件。在开篇介绍[《什么是 Spring Boot》](https://mp.weixin.qq.com/s/SbxL2EZBbFc_jiIPm2BnvA)中提到，Spring Boot 一大特色就是**自动配置（AutoConfiguration）**，为许多第三方开发库提供了几乎可以零配置的开箱即用的能力，如 MyBatis。而 MyBatis **开箱即用**的启动器(Starter)  即 **mybatis-spring-boot-starter**，使得 Spring Boot 整合 MyBatis，可以做到几乎 0 配置开发。**mybatis-spring-boot-starter** 支持传统的 Mapper.xml 的配置方法；**支持几乎没有配置的注解方式**。本小节主要使用注解的方式，Mapper.xml 会在文末稍微提一提。
 
@@ -66,15 +66,15 @@
 
 ```json
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
-	implementation 'com.github.pagehelper:pagehelper-spring-boot-starter:1.2.13'
-	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'mysql:mysql-connector-java'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
+    implementation 'com.github.pagehelper:pagehelper-spring-boot-starter:1.2.13'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'mysql:mysql-connector-java'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
 }
 ```
 
@@ -211,13 +211,13 @@ public class MyResponse implements Serializable {
 -- MySQL
 create table sys_user
 (
-	user_id bigint auto_increment,
-	username varchar(18) not null,
-	nickname varchar(36) not null,
-	user_age tinyint null,
-	user_sex varchar(2) null,
-	constraint sys_user_pk
-		primary key (user_id)
+    user_id bigint auto_increment,
+    username varchar(18) not null,
+    nickname varchar(36) not null,
+    user_age tinyint null,
+    user_sex varchar(2) null,
+    constraint sys_user_pk
+        primary key (user_id)
 );
 ```
 
