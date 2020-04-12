@@ -7,7 +7,7 @@
 
 * [SQL数据库(Spring Data JPA)](./docs/03-SpringDataJPA.md)
 
-* [SQL数据库(MyBatis)](./docs/05-RocketMQ.md)
+* [SQL数据库(MyBatis)](./docs/04-MyBatis.md)
 
 * [消息队列 RocketMQ](./docs/05-RocketMQ.md)
 
