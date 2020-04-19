@@ -40,7 +40,6 @@ public class SysUserService {
     public MyResponse login(final SysUser sysUser) {
         try {
             // 验证用户名和密码是否对的
-            System.out.println(sysUser.getUsername());
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(sysUser.getUsername(),
                             sysUser.getPassword()));
