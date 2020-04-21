@@ -17,3 +17,5 @@
 
 * [Shiro(Token)登录和注册](./docs/08-TokenShiro.md)
 
+* [全局异常处理](./docs/09-ErrorController.md)
+

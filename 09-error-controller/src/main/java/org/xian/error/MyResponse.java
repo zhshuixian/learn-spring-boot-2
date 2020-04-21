@@ -1,6 +1,9 @@
 package org.xian.error;
 import java.io.Serializable;
 
+/**
+ * @author xiaoxian
+ */
 public class MyResponse implements Serializable {
     private static final long serialVersionUID = -2L;
     private String status;

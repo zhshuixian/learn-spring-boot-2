@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+/**
+ * @author xiaoxian
+ */
 @RestController
 public class ErrorController {
 

@@ -3,6 +3,9 @@ package org.xian.error;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author xiaoxian
+ */
 @SpringBootApplication
 public class ErrorApplication {
 

@@ -1,5 +1,8 @@
 package org.xian.error;
 
+/**
+ * @author xiaoxian
+ */
 public class MyException  extends Throwable{
     private final String status;
     private final String  message;

@@ -58,7 +58,7 @@ public class ErrorRestControllerAdvice {
 
     /**
      * 404异常,返回 404 异常
-     *
+     * @param e NoHandlerFoundException
      * @return 资源不存在
      */
     @ExceptionHandler(value = NoHandlerFoundException.class)
