@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 指定 Mapper 类 -->
+<mapper namespace="org.xian.boot.mapper.SysUserMapper">
+  <!-- 返回结果的字段名、字段类型，对应类的成员变量名 ，可以定义多个 id 值不同的 resultMap -->
+  <resultMap id="BaseResultMap" type="org.xian.boot.entity.SysUser">
+    <id column="user_id" jdbcType="BIGINT" property="userId"/>
+    <result column="username" jdbcType="VARCHAR" property="username"/>
+    <result column="nickname" jdbcType="VARCHAR" property="nickname"/>
+    <result column="user_age" jdbcType="TINYINT" property="userAge"/>
+    <result column="user_sex" jdbcType="VARCHAR" property="userSex"/>
+  </resultMap>
+  <!-- SQL 语句 的通用部分 -->
+  <sql id="SysColumn">
+    user_id, username, nickname, user_age, user_sex
+  </sql>
+  <!-- Id 为 Mapper 类的成员变量名 ，resultMap 指定返回接受类 -->
+  <select id="selectAllOnXml" resultMap="BaseResultMap">
+    select
+    <!-- 使用 Include 包含通用的 SQL 部分 -->
+    <include refid="SysColumn"/>
+    from sys_user
+  </select>
+
+  <select id="selectByUserIdOnXml" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="SysColumn"/>
+    from sys_user Where user_id=#{userId}
+  </select>
+  <!-- parameterType 指定传入参数类型 -->
+  <insert id="insertOnXml" parameterType="org.xian.boot.entity.SysUser">
+    Insert Into sys_user(username, nickname, user_age, user_sex)
+    Values (#{username}, #{nickname}, #{userAge}, #{userSex})
+  </insert>
+
+  <update id="updateOnXml" parameterType="org.xian.boot.entity.SysUser">
+    Update sys_user
+    Set nickname=#{nickname},
+        user_age=#{userAge},
+        user_sex=#{userSex}
+    Where username = #{username}
+  </update>
+
+  <delete id="deleteOnXml" parameterType="java.lang.Long">
+    Delete
+    From sys_user
+    where user_id = #{userId}
+  </delete>
+
+</mapper>

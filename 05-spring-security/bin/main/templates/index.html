@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+<h1>登录成功</h1> 
+<div sec:authorize="isAuthenticated()">
+    登录的用户都可以见
+</div>
+<br/>
+<div sec:authorize="hasRole('ROLE_ADMIN')">
+    管理员才可以看见 <br/>
+    <a href="admin.html" th:href="@{/admin}">管理页</a>
+</div>
+<br/>
+<div sec:authorize="hasRole('ROLE_USER')">
+    用户才可以看见
+</div>
+<br/>
+<br/>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="退出登录"/>
+</form>
+</body>
+</html>
