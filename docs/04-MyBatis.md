@@ -221,7 +221,7 @@ create table sys_user
 );
 ```
 
- **Mapper 实体类**：新建 package，名称为 entity 。在 entity下新建一个 SysUser 类：
+ **Mapper 实体类**：新建 package，名称为 entity 。在 entity 下新建一个 SysUser 类：
 
 ```java
 @Data

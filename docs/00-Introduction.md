@@ -27,7 +27,7 @@ Spring Boot 2.X 依赖于 Spring Framework  5 框架，因此需要 JDK 8 及以
 
 ### 1.2、Spring Boot 与 Spring 生态
 
-**从根本上来讲，Spring Boot 不是对 Spring Framework 的增强和扩展，也不是用来替代 Spring 框架的**。其功能就是方便整合、管理 Spring 或者第三方组件，如 Spring Data JPA、Tomcat 、Alibaba Druid 等，实现框架的快速整合和自动配置。可以形象地比喻成**万能胶水**，你需要 Spring Data JPA 就把 JPA 粘上你的项目，你要用 Maybatis 就把Maybatis JPA 粘上你的项目即可，而你并不需要编写太多的整合代码或者配置，只需要**在依赖管理工具（Maven、Gradle）的配置文件写入相应的依赖即可**。
+**从根本上来讲，Spring Boot 不是对 Spring Framework 的增强和扩展，也不是用来替代 Spring 框架的**。其功能就是方便整合、管理 Spring 或者第三方组件，如 Spring Data JPA、Tomcat 、Alibaba Druid 等，实现框架的快速整合和自动配置。可以形象地比喻成**万能胶水**，你需要 Spring Data JPA 就把 JPA 粘上你的项目，你要用 Maybatis 就把 Maybatis JPA 粘上你的项目即可，而你并不需要编写太多的整合代码或者配置，只需要**在依赖管理工具（Maven、Gradle）的配置文件写入相应的依赖即可**。
 
 ![Spring Boot 和 Spring](https://gitee.com/ylooq/image-repository/raw/master/image2020/20200127114615.png)
 
@@ -69,7 +69,7 @@ IntelliJ 开源项目申请免费授权 [https://www.jetbrains.com/shop/eform/op
 
 ![项目类型和语言等](https://gitee.com/ylooq/image-repository/raw/master/image2020/20200127224712.png)
 
-添加“Spring Web ”依赖，Spring Boot 版本在示例中选择 2.2.4，然后Next：
+添加“Spring Web ”依赖，Spring Boot 版本在示例中选择 2.2.4，然后 Next：
 
 ![Spring Web 依赖](https://gitee.com/ylooq/image-repository/raw/master/image2020/20200127202849.png)
 
@@ -83,7 +83,7 @@ IntelliJ 开源项目申请免费授权 [https://www.jetbrains.com/shop/eform/op
 
 #### 3.2、配置国内镜像
 
-Gradle 和Apache Maven 是自动化构建工具，用于管理项目的依赖、编译、打包、文档等信息。如果你想在项目添加其他依赖，可以在此网站 [https://mvnrepository.com/](https://mvnrepository.com/) 查询所依赖包的 Maven 或者 Gradle 的依赖配置信息，把它复制到 pom.xml 文件的```<dependencies></dependencies>``` 元素或者 build.gradle 文件的 ```dependencies { }``` 中即可。
+Gradle 和 Apache Maven 是自动化构建工具，用于管理项目的依赖、编译、打包、文档等信息。如果你想在项目添加其他依赖，可以在此网站 [https://mvnrepository.com/](https://mvnrepository.com/) 查询所依赖包的 Maven 或者 Gradle 的依赖配置信息，把它复制到 pom.xml 文件的```<dependencies></dependencies>``` 元素或者 build.gradle 文件的 ```dependencies { }``` 中即可。
 
 IDEA 在创建项目的时候会自动下载相应的自动化构建软件和依赖，有时候由于网络原因，无法下载相关的资源等，需要手动下载和配置使用国内的镜像。
 
@@ -91,7 +91,7 @@ IDEA 在创建项目的时候会自动下载相应的自动化构建软件和依
 
 Gradle 项目使用 build.gradle 文件管理项目依赖、编译和打包等信息。新建项目可能会遇到的问题有 Gradle 无法下载、相关依赖包无法下载。
 
-**Gradle无法下载**：
+**Gradle 无法下载**：
 
 先使用 IDEA 打开 gradle 项目，会自动在 ```GRADLE_USER_HOME``` 创建相应的存放目录，```GRADLE_USER_HOME``` 默认是用户个人目录下的 .gradle 文件夹。如果 Gradle 下载缓慢或者无法下载的时候，可以使用如下方式手动下载。
 
@@ -122,7 +122,7 @@ repositories {
 
 Maven 使用 pom.xml 来管理项目的依赖、编译和打包等信息。
 
-**安装Maven** 下载地址 [http://maven.apache.org/download.cgi](http://maven.apache.org/download.cgi) ，你需要下载 Binary 二进制压缩包，解压到你的安装目录，并设置 ```M2_HOME``` 指向你的安装目录和把安装目录下的 bin 文件夹添加到 ```PATH``` 变量，配置完成后，可以在控制台输入命令查询是否安装成功：
+**安装 Maven** 下载地址 [http://maven.apache.org/download.cgi](http://maven.apache.org/download.cgi) ，你需要下载 Binary 二进制压缩包，解压到你的安装目录，并设置 ```M2_HOME``` 指向你的安装目录和把安装目录下的 bin 文件夹添加到 ```PATH``` 变量，配置完成后，可以在控制台输入命令查询是否安装成功：
 
 ```bash
 mvn -v
@@ -151,4 +151,4 @@ mvn -v
 
 
 
-我是小先，一个专注大数据、分布式技术的非斜杠青年，爱Coding，爱阅读、爱摄影，更爱生活！
+我是小先，一个专注大数据、分布式技术的非斜杠青年，爱 Coding，爱阅读、爱摄影，更爱生活！

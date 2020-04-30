@@ -33,7 +33,7 @@ Java 发展至今，有着非常成熟的生态体系，有着非常多成熟的
 
 ### 1.2、日志门面
 
-在阿里巴巴《Java开发手册》中，在日志规范的第一条中，就是禁止直接使用上面所列的日志框架的 API，而应该使用像 SLF4J 日志门面的 API。
+在阿里巴巴《Java 开发手册》中，在日志规范的第一条中，就是禁止直接使用上面所列的日志框架的 API，而应该使用像 SLF4J 日志门面的 API。
 
 ![日志规范](https://gitee.com/ylooq/image-repository/raw/master/image2020/20200212212945.png)
 
@@ -43,9 +43,9 @@ Java 发展至今，有着非常成熟的生态体系，有着非常多成熟的
 
 日志门面并不涉及具体的日志实现，还需依赖 Log4j、Logback 等日志框架，它仅仅是对程序屏蔽了不同日志框架的 API 差异，降低程序和日志框架之间的耦合度。
 
- **SLF4J ：** Java 简易日志门面（Simple Logging Facade for Java）的缩写，也是出自 Log4j  、 LogBack  的作者Ceki Gülcü 之手。支持 Java Logging API、Log4j、logback等日志框架。根据作者的说法，SLF4J  效率更高，比起 Apache Commons Logging (JCL) 更简单、更稳定。
+ **SLF4J ：** Java 简易日志门面（Simple Logging Facade for Java）的缩写，也是出自 Log4j  、 LogBack  的作者 Ceki Gülcü 之手。支持 Java Logging API、Log4j、logback 等日志框架。根据作者的说法，SLF4J  效率更高，比起 Apache Commons Logging (JCL) 更简单、更稳定。
 
-**Commons Logging ：** Apache Commons Logging (JCL) 是基于Java的日志记录程序。
+**Commons Logging ：** Apache Commons Logging (JCL) 是基于 Java 的日志记录程序。
 
 ![日志框架和日志门面的关系](https://gitee.com/ylooq/image-repository/raw/master/image2020/20200212221645.png)
 
@@ -107,7 +107,7 @@ dependencies {
 
 ### 2.2、 Log4j2 的配置
 
-Log4j2 默认配置文件是 *resources/log4j2-spring.xml* ，新建Log4j2 的配置文件，如果你使用其他文件名称，可以通过如下方式指定。
+Log4j2 默认配置文件是 *resources/log4j2-spring.xml* ，新建 Log4j2 的配置文件，如果你使用其他文件名称，可以通过如下方式指定。
 
 **application.properties**
 
@@ -339,7 +339,7 @@ public class HelloSpringBoot {
 
 https://www.cnblogs.com/keeya/p/10101547.html
 
-SpringBoot整合log4j2日志全解 https://www.cnblogs.com/keeya/p/10101547.html
+SpringBoot 整合 log4j2 日志全解 https://www.cnblogs.com/keeya/p/10101547.html
 
 
 

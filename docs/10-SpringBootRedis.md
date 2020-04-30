@@ -4,11 +4,11 @@
 >
 > 源代码仓库：[https://github.com/zhshuixian/learn-spring-boot-2](https://github.com/zhshuixian/learn-spring-boot-2)
 >
-> 码云：
+> 码云：https://gitee.com/ylooq/learn-spring-boot-2
 
 在上一节我们主要实现了 Spring Boot 全局异常处理，这一小节主要是内容为 Spring Boot 整合 Redis ，将实现如下两个内容：
 
-- Spring Boot 直接操作 Redis ，实现 K-V NoSQL的 set 和 get
+- Spring Boot 直接操作 Redis ，实现 K-V NoSQL 的 set 和 get
 - Spring Boot 的数据库缓存
 
 ## 1、Redis 的简介和安装
@@ -345,6 +345,6 @@ public User myDelete(@RequestParam(value = "username") String username) {
 
 对应 Redis 更多的操作 API ，例如 数组、集合、Hash ，推荐阅读参考文献 1
 
-参考文献 1：了解 Redis 并在 Spring Boot 项目中使用 Redis 「https://www.ibm.com/developerworks/cn/java/know-redis-and-use-it-in-springboot-projects/index.html」
+参考文献 1：了解 Redis 并在 Spring Boot 项目中使用 Redis 「 https://www.ibm.com/developerworks/cn/java/know-redis-and-use-it-in-springboot-projects/index.html 」
 
 下一节的内容为 Spring Boot 整合 MangoDB （另一个常用的 NoSQL）或者简单介绍一下 Redis 的分布式锁。更多内容可以关注小先的 CSDN 博客 『大数据小先』 或者公众号『编程技术进阶』哦。

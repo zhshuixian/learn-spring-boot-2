@@ -1,14 +1,14 @@
 # Spring Boot  2.x 实战--第一个Spring Boot程序
 
-《Spring Boot 2.X 实战》系列文章将分为如下几个模块，本小节将实战如何构建 RESTful API，并自定义返回数据和HTTP 返回码、以及给 API 接口传入数据，下一小节将实战 Spring Boot 整合 Log4j2 与 Slf4j 实现日志打印和输出到文件：
+《Spring Boot 2.X 实战》系列文章将分为如下几个模块，本小节将实战如何构建 RESTful API，并自定义返回数据和 HTTP 返回码、以及给 API 接口传入数据，下一小节将实战 Spring Boot 整合 Log4j2 与 Slf4j 实现日志打印和输出到文件：
 
 ![Spring Boot 2.X 实战](https://gitee.com/ylooq/image-repository/raw/master/image2020/20200205220414.png)
 
-我是小先，一个专注大数据、分布式技术的非斜杠青年，爱Coding，爱阅读、爱摄影，更爱生活！
+我是小先，一个专注大数据、分布式技术的非斜杠青年，爱 Coding，爱阅读、爱摄影，更爱生活！
 
 源代码仓库：[https://github.com/zhshuixian/learn-spring-boot-2](https://github.com/zhshuixian/learn-spring-boot-2)
 
-CSDN主页：[https://me.csdn.net/u010974701](https://me.csdn.net/u010974701)
+CSDN 主页：[https://me.csdn.net/u010974701](https://me.csdn.net/u010974701)
 
 > 上一章中主要介绍了 Spring Boot 和如何在 IDEA 中创建 Spring Boot 项目，本章将在上一章的基础上，介绍如何运行 Spring Boot 项目，并编写一些 RESTful API，本章主要包含如下内容：
 > - 运行 Spring Boot 项目
@@ -176,7 +176,7 @@ public class Messages {
 
 ### 2.4 传入数据 @PathVariable
 
-```@PathVariable``` 注解的作用是把 URL 路径的变量作为参数传入方法函数中。例如 GitHub 的个人主页URL  [https://github.com/zhshuixian](https://github.com/zhshuixian) 就是访问到小先的主页。[https://github.com/{username}](https://github.com/{username}) 中的 username 就是 *PathVariable*。
+```@PathVariable``` 注解的作用是把 URL 路径的变量作为参数传入方法函数中。例如 GitHub 的个人主页 URL  [https://github.com/zhshuixian](https://github.com/zhshuixian) 就是访问到小先的主页。[https://github.com/{username}](https://github.com/{username}) 中的 username 就是 *PathVariable*。
 
 ```
 @PathVariable(value = "username" ,name = "username",required = true)
@@ -258,7 +258,7 @@ public class SysUser {
 
 ![Body JSON 数据接收](https://gitee.com/ylooq/image-repository/raw/master/image2020/20200204000020.png)
 
-通过示例可以看出 ```@RequestBody```  注解主要是接收传入的 JSON 数据，并根据JSON 数据的 key 名称和成员变量名称对应，然后将 value 值通过 Setter 或者 AllArgsConstructor 构造函数赋值给对应名称的成员变量。在 Getter 成员变量的时候一定要**注意 Null PointerException**。如果 ```@RequestBody```  注解的是 String，这会 Body 的内容当做字符串赋值：
+通过示例可以看出 ```@RequestBody```  注解主要是接收传入的 JSON 数据，并根据 JSON 数据的 key 名称和成员变量名称对应，然后将 value 值通过 Setter 或者 AllArgsConstructor 构造函数赋值给对应名称的成员变量。在 Getter 成员变量的时候一定要**注意 Null PointerException**。如果 ```@RequestBody```  注解的是 String，这会 Body 的内容当做字符串赋值：
 
 ```java
     @PostMapping("text")
@@ -407,7 +407,7 @@ class HelloSpringBootTest {
 
 ### 3.3、TestRestTemplate
 
-实战如何使用 TestRestTemplate进行 POST、GET 请求，上传 JSON、String 类型的数据，并接受返回的 JSON 数据和使用 assertThat 断言验证数据是否正确返回。
+实战如何使用 TestRestTemplate 进行 POST、GET 请求，上传 JSON、String 类型的数据，并接受返回的 JSON 数据和使用 assertThat 断言验证数据是否正确返回。
 
 ```Java
     @Test

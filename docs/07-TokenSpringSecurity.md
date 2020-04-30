@@ -213,7 +213,7 @@ create table sys_user
 );
 ```
 
- **Entity 实体类**：新建 package，名称为 entity 。在 entity下新建一个 SysUser 类：
+ **Entity 实体类**：新建 package，名称为 entity 。在 entity 下新建一个 SysUser 类：
 
 ```java
 public class SysUser implements Serializable {
@@ -439,7 +439,7 @@ public class ErrorAuthenticationEntryPoint implements AuthenticationEntryPoint, 
 }
 ```
 
-**UserDetailsServiceImpl** ：自定义实现 UserDetailsService，通过重写UserDetailsService接口的loadUserByUsername 方法，给 Spring Security 传入用户名、用户密码、用户角色。
+**UserDetailsServiceImpl** ：自定义实现 UserDetailsService，通过重写 UserDetailsService 接口的 loadUserByUsername 方法，给 Spring Security 传入用户名、用户密码、用户角色。
 
 ```java
 @Service

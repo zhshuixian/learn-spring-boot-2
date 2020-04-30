@@ -78,7 +78,7 @@ public class SecurityApplication {}
 <img src="https://gitee.com/ylooq/image-repository/raw/master/image2020/20200325231259.png" alt="image-20200325231257474" style="zoom: 45%;" />
 
 **View 展示层**：Thymeleaf  渲染的 Web 页面。
-**Controller控制器**：应用的主要逻辑部分。
+**Controller 控制器**：应用的主要逻辑部分。
 **Model 模型层**：编写相应的 MyBatis Mapper 接口，实现与 MySQL 数据库的交互。
 
 ### 2.1）数据表结构和 Mapper 实体类
@@ -110,7 +110,7 @@ create table sys_user
 );
 ```
 
- **Mapper 实体类**：新建 package，名称为 entity 。在 entity下新建一个 SysUser 类：
+ **Mapper 实体类**：新建 package，名称为 entity 。在 entity 下新建一个 SysUser 类：
 
 ```java
 public class SysUser implements Serializable {
@@ -173,7 +173,7 @@ public class MyUserDetailsServiceImpl implements UserDetailsService {
 
 **代码解析：**
 
-*loadUserByUsername*：通过重写UserDetailsService接口的loadUserByUsername 方法，给 Spring Security 传入用户名、用户密码、用户角色。
+*loadUserByUsername*：通过重写 UserDetailsService 接口的 loadUserByUsername 方法，给 Spring Security 传入用户名、用户密码、用户角色。
 
 *List\<SimpleGrantedAuthority\>* ：authorities.add 可以增加多个用户角色，对于一个用户有多种角色的系统来说，可以通过增加用户角色表、用户--角色映射表，存储多个用户角色信息。
 

@@ -120,7 +120,7 @@ create table sys_user
 );
 ```
 
- **Entity 实体类**：新建 package，名称为 entity 。在 entity下新建一个 SysUser 类：
+ **Entity 实体类**：新建 package，名称为 entity 。在 entity 下新建一个 SysUser 类：
 
 ```java
 public class SysUser implements Serializable {
@@ -676,7 +676,7 @@ Shiro 角色和权限的设置在 ShiroRealm 的 doGetAuthorizationInfo 的方�
 
 **小结**
 
-这一章中，主要实现了 Spring Boot 整合Shiro 实现 Token 的登录和验证，以及角色和权限的访问控制。下面的文章安排如下：
+这一章中，主要实现了 Spring Boot 整合 Shiro 实现 Token 的登录和验证，以及角色和权限的访问控制。下面的文章安排如下：
 
 - 微信扫码登录
 - Spring Boot 的异常拦截：统一拦截、封装异常信息返回给前端。

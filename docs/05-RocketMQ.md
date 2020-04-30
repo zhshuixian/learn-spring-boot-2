@@ -243,7 +243,7 @@ public class UserConsumer implements RocketMQListener<User> {
 
 代码解析：
 
-*@RocketMQMessageListener*：指定监听的 topic，consumerGroup，selectorExpression等；
+*@RocketMQMessageListener*：指定监听的 topic，consumerGroup，selectorExpression 等；
 
 topic：消息主题，表示一类的消息，比如上文的 string-topic 、user-topic，topic = "string-topic" 表示值消费 string-topic 主题的消息；
 
