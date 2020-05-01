@@ -3,6 +3,9 @@ package org.xian.mongo;
 import org.springframework.data.annotation.Id;
 
 
+/**
+ * @author xiaoxian
+ */
 public class User {
     @Id
     private Integer id;
