@@ -33,7 +33,7 @@ MongoDB 记录的是一个文档，由 key--value 组成的键值对数据结构
 ![](https://gitee.com//ylooq/image-repository/raw/master/image2020/20200501181924.png)
 
 - 类似 JSON 的文档对象支持多种编程语言
-- 支持嵌入，减少了 SQL 所需的字段联接
+- 支持嵌入，减少了 SQL 所需的字段连接
 - 支持动态扩展
 
 **MongoDB 主要特点**
@@ -161,7 +161,7 @@ public void insert() {
 
 因为在 User.java 声明了 @Id key 值，所以在插入的要手动指定 setId(1) ，不然无法插入会报错。在进行插入、查询等操作的时候，MongoDB 会自己根据 Java 实体类使用那个集合（Collection），类似于 Spring Data JPA 的 @Entity 注解的实体类。
 
-在 Idea 中，使用 Shift+Ctrl+F10 运行改测试方法。
+在 Idea 中，使用 Shift+Ctrl+F10 运行该测试方法。
 
 #### 2.1.2、查询
 

@@ -11,3 +11,4 @@
 * [全局异常处理](09-ErrorController.md)
 * [整合Redis缓存](10-SpringBootRedis.md)
 * [整合 MongoDB](11-SpringBootMongoDB.md)
+* [实现简单的 Redis 锁](12-DistributedLock.md)
