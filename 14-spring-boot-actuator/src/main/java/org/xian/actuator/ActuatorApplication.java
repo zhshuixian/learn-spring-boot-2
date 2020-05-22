@@ -1,16 +1,13 @@
-package org.xian.webflux;
+package org.xian.actuator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * @author xiaoxian
- */
 @SpringBootApplication
-public class WebfluxApplication {
+public class ActuatorApplication<M> {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebfluxApplication.class, args);
+        SpringApplication.run(ActuatorApplication.class, args);
     }
 
 }
