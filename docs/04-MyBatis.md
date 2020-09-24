@@ -1,8 +1,6 @@
 # Spring Boot 2.X 实战--SQL 数据库（MyBatis）
 
->我是小先，一个专注大数据、分布式技术的非斜杠青年，爱Coding，爱阅读、爱摄影，更爱生活！
->
->大数据小先博客主页：https://me.csdn.net/u010974701
+>小先博客主页：https://me.csdn.net/u010974701
 >
 >源代码仓库：[https://github.com/zhshuixian/learn-spring-boot-2](https://github.com/zhshuixian/learn-spring-boot-2)
 >

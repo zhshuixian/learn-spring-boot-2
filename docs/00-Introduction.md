@@ -149,6 +149,3 @@ mvn -v
 
 本小节主要介绍了 Spring Boot 和如何创建 Spring Boot 的项目。下一节内容将介绍如何运行 Spring Boot 项目并编写一些简单的 RESTful API。
 
-
-
-我是小先，一个专注大数据、分布式技术的非斜杠青年，爱 Coding，爱阅读、爱摄影，更爱生活！

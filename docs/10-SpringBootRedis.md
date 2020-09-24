@@ -347,4 +347,4 @@ public User myDelete(@RequestParam(value = "username") String username) {
 
 参考文献 1：了解 Redis 并在 Spring Boot 项目中使用 Redis 「 https://www.ibm.com/developerworks/cn/java/know-redis-and-use-it-in-springboot-projects/index.html 」
 
-下一节的内容为 Spring Boot 整合 MangoDB （另一个常用的 NoSQL）或者简单介绍一下 Redis 的分布式锁。更多内容可以关注小先的 CSDN 博客 『大数据小先』 或者公众号『编程技术进阶』哦。
+下一节的内容为 Spring Boot 整合 MangoDB （另一个常用的 NoSQL）或者简单介绍一下 Redis 的分布式锁。更多内容可以关注小先的 CSDN 博客 『 Java 小先』 或者公众号『编程技术进阶』哦。

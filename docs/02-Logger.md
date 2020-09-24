@@ -1,8 +1,6 @@
 # Spring Boot  2.x 实战--日志打印与输出到文件
 
->我是小先，一个专注大数据、分布式技术的非斜杠青年，爱Coding，爱阅读、爱摄影，更爱生活！
->
->大数据小先博客主页：https://me.csdn.net/u010974701
+>博客主页：https://me.csdn.net/u010974701
 >
 >源代码仓库：[https://github.com/zhshuixian/learn-spring-boot-2](https://github.com/zhshuixian/learn-spring-boot-2)
 >

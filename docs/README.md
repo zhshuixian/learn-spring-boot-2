@@ -14,7 +14,7 @@
 
 ### 作者介绍
 
-**作者介绍:**  大数据小先，一个专注大数据、分布式技术的非斜杠青年，爱 Coding，爱阅读、爱摄影，更爱生活！
+**作者介绍:**  小先，一个专注 Java、分布式技术的非斜杠青年，爱 Coding，爱阅读、爱摄影，更爱生活！
 
 GitHub 主页 : [https://github.com/zhshuixian](https://github.com/zhshuixian)
 
